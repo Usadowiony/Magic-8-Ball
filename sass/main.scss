@@ -1,1 +1,13 @@
 @import "reset";
+
+.github-ico{
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    font-size: 2.5rem;
+    color: #222;
+    text-shadow: 0 0 2px rgba(114, 114, 114, 0.61);
+    &:hover{
+        color: lighten(#222, 5%);
+    }
+}
