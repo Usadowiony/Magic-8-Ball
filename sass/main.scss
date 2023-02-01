@@ -1,13 +1,18 @@
 @import "reset";
 
+body{
+    min-height: 100vh;
+    background: linear-gradient(159deg, rgba(27,27,27,1) 0%, rgba(37,37,37,1) 100%);
+}
+
 .github-ico{
     position: absolute;
     right: 30px;
     bottom: 15px;
     font-size: 2.5rem;
-    color: #222;
-    text-shadow: 0 0 2px rgba(114, 114, 114, 0.61);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(15, 15, 15, 0.89);
     &:hover{
-        color: lighten(#222, 5%);
+        color: darken(#fff, 10%);
     }
 }
