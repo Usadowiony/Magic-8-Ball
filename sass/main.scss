@@ -1,46 +1,81 @@
 @import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(159deg, rgba(27,27,27,1) 0%, rgba(37,37,37,1) 100%);
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: linear-gradient(
+		159deg,
+		rgba(27, 27, 27, 1) 0%,
+		rgba(37, 37, 37, 1) 100%
+	);
 }
 
-.github-ico{
-    position: absolute;
-    right: 30px;
-    bottom: 15px;
-    font-size: 2.5rem;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(15, 15, 15, 0.89);
-    &:hover{
-        color: darken(#fff, 10%);
-    }
+.github-ico {
+	position: absolute;
+	right: 30px;
+	bottom: 15px;
+	font-size: 2.5rem;
+	color: #fff;
+	text-shadow: 0 0 5px rgba(15, 15, 15, 0.89);
+	&:hover {
+		color: darken(#fff, 10%);
+	}
 }
 
-.app{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 450px;
-    &__h1{
-        font-size: 60px;
-        &--question{
-            font-size: 30px;
-        }
-    }
-    &__h2{
-        font-size: 18px;
-    }
-    &__img{
-        width: 200px;
-    }
-    &__input{
-        width: 90%;
-        border: 2px solid #222;
-        border-radius: 5px;
-    }
+.app {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	width: 450px;
+	font-family: "Josefin Sans", sans-serif;
+	color: #fff;
+	&__h1 {
+		font-size: 60px;
+		font-weight: bold;
+		text-shadow: 0 0 10px rgb(0, 0, 0);
+		&--question {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+	}
+	&__h2 {
+		font-size: 18px;
+		font-weight: 300;
+		text-shadow: 0 0 5px rgb(0, 0, 0);
+		margin-bottom: 60px;
+	}
+	&__img {
+		width: 200px;
+		cursor: pointer;
+		margin-bottom: 30px;
+	}
+	&__input {
+		width: 90%;
+		padding: 7px 10px;
+		border: 1px solid rgb(255, 255, 255);
+		border-radius: 5px;
+		background-color: rgba(0, 0, 0, 0.192);
+		color: #fff;
+		font-size: 18px;
+		font-family: "Josefin Sans", sans-serif;
+		margin-bottom: 100px;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__result {
+		position: absolute;
+		bottom: 35px;
+		font-size: 22px;
+		color: rgb(63, 217, 255);
+		&--error {
+			font-size: 20px;
+			color: rgb(255, 63, 63);
+		}
+	}
 }
