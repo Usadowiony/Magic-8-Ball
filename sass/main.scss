@@ -79,3 +79,27 @@ body {
 		}
 	}
 }
+.shake-animation {
+	animation: shake 1s 1;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(-40px);
+	}
+	20% {
+		transform: translateX(45px);
+	}
+	40% {
+		transform: translateX(-35px);
+	}
+	60% {
+		transform: translateX(25px);
+	}
+	80% {
+		transform: translateX(-15px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
