@@ -32,6 +32,13 @@ const showAnswer = () => {
 };
 
 ball.addEventListener("click", () => {
-	ballAnimation();
-	showAnswer();
+	//if empty input
+	if (input.value === "") {
+		result.classList.add('app__result--error')
+		result.textContent = 'You must enter the question!'
+	}else{
+		result.classList.remove('app__result--error')
+		ballAnimation();
+		showAnswer();
+	}
 });
