@@ -29,15 +29,19 @@ const showAnswer = () => {
 	setTimeout(() => {
 		result.textContent = answer;
 	}, 1000);
+	console.log(input.textContent.slice(-1));
 };
 
 ball.addEventListener("click", () => {
 	//if empty input
 	if (input.value === "") {
-		result.classList.add('app__result--error')
-		result.textContent = 'You must enter the question!'
-	}else{
-		result.classList.remove('app__result--error')
+		result.classList.add("app__result--error");
+		result.textContent = "You must enter the question!";
+	} else if (input.value.slice(-1) !== `?`) {
+		result.classList.add("app__result--error");
+		result.textContent = "The question must end with ?";
+	} else {
+		result.classList.remove("app__result--error");
 		ballAnimation();
 		showAnswer();
 	}
